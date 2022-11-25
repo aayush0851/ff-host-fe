@@ -1,0 +1,31 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/universal-styles";
+
+.carousel-container {
+  position: relative;
+  z-index: -10;
+  .navigation {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e5e5e5;
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+    border-radius: 100%;
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(center, center);
+  }
+  .navigation:hover {
+    background-color: #e5e5e5;
+    opacity: 1;
+  }
+  .prev {
+    left: 30px;
+  }
+  .next {
+    right: 30px;
+  }
+}

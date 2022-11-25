@@ -1,0 +1,142 @@
+@import "./colors";
+@import "./fonts";
+
+.ff-color-primary-gray {
+  color: $color-primary-gray;
+}
+
+.ff-color-secondary-black-50 {
+  color: $color-secondary-black-50;
+}
+.ff-color-bright-primary {
+  color: $color-bright-primary;
+}
+
+.ff-font-primary {
+  font-family: $main-font;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ff-base {
+  @extend .ff-color-primary-gray;
+  @extend .ff-font-primary;
+}
+
+.ff-h1 {
+  @extend .ff-base;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.ff-h2 {
+  @extend .ff-base;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.ff-h3 {
+  @extend .ff-base;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.ff-h4 {
+  @extend .ff-base;
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.ff-heading {
+  @extend .ff-base;
+  font-family: $bebas;
+  font-weight: 900;
+  font-size: 2.75rem;
+  line-height: 3.625rem;
+}
+
+.ff-sub-heading {
+  @extend .ff-base;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1px;
+}
+
+.ff-h4-bold {
+  @extend .ff-h4;
+  font-weight: 900;
+}
+
+.ff-sub-heading-bold {
+  @extend .ff-sub-heading;
+  font-weight: 900;
+}
+
+.ff-body-heading {
+  @extend .ff-base;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.ff-body-heading-bold {
+  @extend .ff-body-heading;
+  font-weight: 900;
+}
+
+.ff-body-text {
+  @extend .ff-base;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.ff-body-text-bold {
+  @extend .ff-body-text;
+  font-weight: 900;
+}
+
+.ff-small-text {
+  @extend .ff-base;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.ff-small-text-bold {
+  @extend .ff-small-text;
+  font-weight: 900;
+}
+
+.ff-color-primary-blue {
+  color: $color-primary-blue;
+}
+
+.ff-color-black-50 {
+  color: $color-secondary-black-50;
+}
+
+
+.grayscale {
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ff-circular-image {
+  border-radius: 100%;
+}
+
+.ff-avoid-break {
+  break-inside: avoid;
+}

@@ -1,0 +1,19 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/fonts";
+@import "src/assets/scss/universal-styles";
+
+.button-wrapper {
+  @include ff-fx-layout-with-gap(row, 12px);
+  @include ff-fx-layout-alignment(center, center);
+  padding: 14px 24px;
+  border-radius: 4px;
+  height: 18px;
+  background-color: black;
+  .title {
+    font-family: $alexandria;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-bright-primary;
+  }
+}

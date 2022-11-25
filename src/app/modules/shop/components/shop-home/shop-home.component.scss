@@ -1,0 +1,76 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/universal-styles";
+
+.goto-section {
+  padding: 25px 150px;
+  background-image: url("../../../../../assets/images/landscape_2.jpg");
+  background-size: cover;
+  height: 80vh;
+  .info-section {
+    margin-top: 150px;
+    @include ff-fx-layout(column);
+    @include ff-fx-layout-alignment(center, flex-start);
+    color: $color-bright-primary;
+    .ff-heading {
+      line-height: unset;
+      font-size: 150px;
+      margin-bottom: 20px;
+    }
+    .body-text {
+      font-family: $alexandria;
+    }
+    .cta {
+      cursor: pointer;
+      margin-top: 40px;
+      @include ff-fx-layout(row);
+      @include ff-fx-layout-alignment(center, center);
+      padding: 30px 50px;
+      width: 200px;
+      font-size: 30px;
+      border: 2px solid white;
+      font-family: $bebas;
+      height: 20px;
+      transition: all 0.2s;
+      color: black;
+      background-color: white;
+      &:hover {
+        font-size: 40px;
+        color: white;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.section {
+  position: relative;
+  z-index: -2;
+  padding: 70px 150px;
+}
+.carousel-1 {
+  margin-top: unset;
+  padding: unset;
+}
+.popular {
+  background-color: $color-background-gray;
+  &-products {
+    margin: 0 auto;
+    .grid-item {
+      width: 350px;
+      margin-bottom: 40px;
+    }
+  }
+}
+.partners {
+  background-color: $color-background-gray;
+  .partner-grid {
+    @include ff-fx-layout-with-gap(row, 30px);
+    @include ff-fx-layout-alignment(space-around, center);
+    flex-wrap: wrap;
+    & > * {
+      margin-top: 100px;
+      margin-bottom: 80px;
+    }
+  }
+}
+

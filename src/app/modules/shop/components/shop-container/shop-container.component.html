@@ -1,0 +1,8 @@
+<mat-drawer-container class="shop-container">
+  <mat-drawer [mode]="'over'" [opened]="isSidebarOpen" [position]="'end'">
+    <ff-sidebar (toggleSidebar)="isSidebarOpen = !isSidebarOpen"></ff-sidebar>
+  </mat-drawer>
+  <ff-shop-navbar (sidebarOpened)="isSidebarOpen = !isSidebarOpen"></ff-shop-navbar>
+  <router-outlet></router-outlet>
+  <ff-shop-footer></ff-shop-footer>
+</mat-drawer-container>

@@ -1,0 +1,39 @@
+<div class="nav-bar">
+  <div class="logo pointer" [routerLink]="'/'" (click)="resetTabs()">
+    <img src="../../../../../assets/images/solid-logo.png" width="auto" height="76px"/>
+  </div>
+  <div class="actions">
+    <div class="action-links">
+      <ul>
+        <li *ngFor="let tab of navTabs" (click)="navigateToTab(tab)"
+            [ngClass]="{'action-active': tab.isActive}"
+        >
+          <div class="overlay" id="{{tab.name}}"
+             [ngClass]="tab.isActive ? 'overlay-active' : 'overlay-inactive'"
+          ></div>
+          <span class="pointer"
+            [ngClass]="{'underline-effect-dark': !tab.isActive}"
+          >
+            {{tab.name}}
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="more-actions">
+      <mat-icon
+        matBadgeColor="warn"
+        fontSet="material-icons-outlined"
+        matBadgePosition="below after"
+        matBadgeSize="small"
+        matBadge="{{cartCount}}"
+        matBadgeHidden="{{cartCount<1}}"
+        class="pointer icon shopping-bag"
+      >
+        shopping_bag
+      </mat-icon>
+      <mat-icon (click)="sidebarOpened.emit();"
+        class="pointer icon menu"
+      >menu</mat-icon>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/universal-styles";
+
+.sidebar-container {
+  height: 100%;
+  width: 600px;
+  background-color: $color-bright-primary;
+  .head {
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(space-between, flex-start);
+    padding: 40px 60px;
+    .greet .main {
+      font-family: $main-font;
+    }
+  }
+  .action-links {
+    padding: 0 60px;
+    margin: 60px 0;
+    ul {
+      @include ff-fx-layout-with-gap(column, 20px);
+      @include ff-fx-layout-alignment(space-between, flex-start);
+      li {
+        font-family: $bebas;
+        letter-spacing: 2.5px;
+        transition: all 0.2s;
+        font-size: 50px;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        text-transform: uppercase;
+        -webkit-text-stroke-width: 1px;
+        color: transparent;
+        -webkit-text-stroke-color: $color-primary-gray;
+      }
+      li:hover {
+        letter-spacing: 4px;
+        //color: $color-primary-gray;
+        color: $color-primary-highlight;
+        -webkit-text-stroke-color: transparent;
+      }
+    }
+  }
+}

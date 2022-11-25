@@ -1,0 +1,11 @@
+<div class="main-container">
+  <ng-container *ngIf="showLoader">
+    <div class="loader-overlay">
+      <div class="loader-container">
+        <div class="loader"></div>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+  </ng-container>
+  <router-outlet></router-outlet>
+</div>

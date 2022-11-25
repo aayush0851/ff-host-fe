@@ -1,0 +1,42 @@
+
+<div class="goto-section">
+  <div class="info-section">
+    <div class="ff-heading   ff-color-bright-primary">Fuel your flame</div>
+    <div class="body-text ff-color-bright-primary">
+      Welcome to Fitness Flame Nutrition,<br> Bringing you the best nutrition at your doorstep
+    </div>
+    <div class="cta">
+      Go Shopping
+    </div>
+  </div>
+</div>
+<div class="section popular">
+  <ff-section-heading [title]="'What\'s New'"></ff-section-heading>
+  <ngx-masonry
+    class="popular-products"
+    #masonry
+    [options]="masonryOptions"
+    [ordered]="true"
+    (layoutComplete)="onLayoutComplete()"
+  >
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+    <ff-item-card ngxMasonryItem class="grid-item"></ff-item-card>
+  </ngx-masonry>
+</div>
+
+<div class="section carousel-1">
+  <ff-carousel></ff-carousel>
+</div>
+<div class="section partners">
+  <ff-section-heading [title]="'PARTNERS'"></ff-section-heading>
+
+  <div class="partner-grid">
+    <ff-review-cards></ff-review-cards>
+    <ff-review-cards></ff-review-cards>
+    <ff-review-cards></ff-review-cards>
+  </div>
+</div>

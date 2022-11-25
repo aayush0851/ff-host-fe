@@ -1,0 +1,66 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/universal-styles";
+@import "../../../../../assets/scss/custom-styles";
+
+.shop-footer {
+  @include ff-fx-layout(row);
+  @include ff-fx-layout-alignment(space-between, center);
+  padding: 70px 150px;
+  background-color: $color-primary-gray;
+  font-family: $main-font;
+  .info {
+    margin-top: -40px;
+    @include ff-fx-layout(column);
+    @include ff-fx-layout-alignment(center, center);
+    color: $color-bright-primary;
+    .meta {
+      margin-top: -20px;
+      text-align: center;
+      color: $color-bright-primary;
+    }
+    .social-media {
+      margin-top: 30px;
+      @include ff-fx-layout-with-gap(row, 30px);
+      @include ff-fx-layout-alignment(flex-start, center);
+      .social-link {
+        font-size: 30px;
+        cursor: pointer;
+        a {
+          color: $color-bright-primary;
+        }
+      }
+    }
+  }
+  .links {
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(flex-end, flex-start);
+    .section {
+      margin-left: 70px;
+      .section-heading {
+        letter-spacing: 1px;
+        text-align: left;
+        font-weight: 400;
+        font-family: $bebas;
+        color: white;
+        margin-bottom: 20px;
+      }
+      ul {
+        li {
+          margin-bottom: 5px;
+          cursor: pointer;
+          text-align: left;
+          a {
+            text-transform: uppercase;
+            color: $color-bright-primary;
+          }
+        }
+        li:hover {
+          a {
+            color: $color-primary-highlight;
+          }
+        }
+      }
+    }
+  }
+}

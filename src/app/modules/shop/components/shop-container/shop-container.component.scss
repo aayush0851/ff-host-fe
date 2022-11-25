@@ -1,0 +1,19 @@
+.shop-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  ff-shop-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+  }
+  .shop-body {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 76px);
+    z-index: 111;
+  }
+}

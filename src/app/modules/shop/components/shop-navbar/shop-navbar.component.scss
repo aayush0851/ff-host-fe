@@ -1,0 +1,66 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/universal-styles";
+@import "src/assets/scss/custom-styles";
+
+.nav-bar {
+  color: $color-primary-gray;
+  background-color: $color-bright-primary;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  @include ff-fx-layout(row);
+  @include ff-fx-layout-alignment(space-between, center);
+  padding: 0 150px;
+  height: 76px;
+  width: 100%;
+  box-sizing: border-box;
+  .actions {
+    height: 100%;
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(flex-end, center);
+    .action-links {
+      height: inherit;
+      ul {
+        height: 100%;
+        @include ff-fx-layout(row);
+        li {
+          transition: background 1s linear;
+          cursor: pointer;
+          width: 140px;
+          font-family: $bebas;
+          font-size: 25px;
+          position: relative;
+          transform: skewX(-20deg);
+          @include ff-fx-layout(row);
+          @include ff-fx-layout-alignment(center, center);
+          //overflow: hidden;
+          span {
+            transform: skewX(20deg);
+            letter-spacing: 1px;
+            color: $color-primary-gray;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+        }
+        .action-active {
+          span {
+            color: $color-bright-primary;
+          }
+        }
+      }
+    }
+    .more-actions {
+      margin-left: 40px;
+      @include ff-fx-layout-with-gap(row, 30px);
+      @include ff-fx-layout-alignment(flex-end, center);
+      .icon {
+        transform: scale(1.2) translateY(-2px);
+      }
+      .shopping-bag {
+
+      }
+      .menu {
+
+      }
+    }
+  }
+}

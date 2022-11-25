@@ -1,0 +1,59 @@
+@import "./colors";
+
+.underline-effect {
+  display: inline-block;
+  color: $color-bright-primary;
+}
+
+.underline-effect-after {
+  content: '';
+  display: block;
+  transform: scaleX(0);
+  height: 0.3px;
+  width: 100%;
+  background: $color-bright-primary;
+  transition: transform .3s;
+  transform-origin: bottom right;
+}
+
+.underline-effect::after {
+  @extend .underline-effect-after;
+}
+.underline-effect:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+.underline-effect-dark {
+  @extend .underline-effect;
+  color: $color-primary-gray;
+}
+.underline-effect-dark::after {
+  @extend .underline-effect-after;
+  height: 3px;
+  background: $color-primary-gray;
+}
+.underline-effect-dark:hover::after {
+  width: 100%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(45deg, $color-primary-gray, $color-secondary-black-50);;
+  transition: width .3s;
+}
+
+.overlay-active {
+  color: $color-bright-primary;
+  width: 100%;
+}
+
+.overlay-inactive {
+  width: 0%;
+}

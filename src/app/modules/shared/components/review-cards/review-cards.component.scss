@@ -1,0 +1,59 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/fonts";
+@import "src/assets/scss/universal-styles";
+@import "src/assets/scss/custom-styles";
+
+
+.review-card {
+  width: 275px;
+  padding: 0 30px 30px;
+  background-color: $color-bright-primary;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  @include ff-fx-layout-with-gap(column, 40px);
+  @include ff-fx-layout-alignment(flex-start, center);
+  .profile-picture {
+    margin-top: -50px;
+    border-radius: 100%;
+    border: 2px solid white;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(center, center);
+    .img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .profile-data {
+    @include ff-fx-layout(column);
+    @include ff-fx-layout-alignment(flex-start, center);
+    //color: white;
+    .name {
+      font-family: $bebas;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+    .rating {
+      margin-bottom: 30px;
+      i {
+        color: $color-primary-highlight;
+      }
+    }
+    .review {
+      font-family: $alexandria;
+      text-align: center;
+    }
+  }
+}
+
+.review-column {
+  @include ff-fx-layout-with-gap(column, 40px);
+  @include ff-fx-layout-alignment(flex-start, center);
+}
+
+.review-row {
+  @include ff-fx-layout-with-gap(row, 40px);
+  @include ff-fx-layout-alignment(center, flex-start);
+}

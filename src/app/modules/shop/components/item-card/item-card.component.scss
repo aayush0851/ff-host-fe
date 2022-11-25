@@ -1,0 +1,54 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/fonts";
+@import "src/assets/scss/universal-styles";
+@import "src/assets/scss/custom-styles";
+
+.item-card-container {
+  padding: 24px;
+  background-color: $color-bright-primary;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  @include ff-fx-layout-with-gap(column, 25px);
+  @include ff-fx-layout-alignment(space-between, flex-start);
+  .image-container {
+    width: 100%;
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(center, center);
+    .img {
+      width: 65%;
+      height: auto;
+    }
+  }
+  .interaction-zone {
+    width: 100%;
+    @include ff-fx-layout-with-gap(column, 20px);
+    @include ff-fx-layout-alignment(center, flex-start);
+    .details {
+      .title {
+        @include ff-line-clamp(1);
+        font-family: $bebas;
+        font-size: 30px;
+      }
+      .description {
+        @include ff-line-clamp(1);
+        font-family: $roboto;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+        color: $color-lost-gray;
+      }
+    }
+    .controls {
+      width: 100%;
+    }
+  }
+}
+
+.card-s {
+  width: 250px;
+  padding: 12px;
+  .interaction-zone {
+    .details .title {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/typography";
+@import "src/assets/scss/universal-styles";
+
+.heading-wrapper {
+  margin: 50px 0 70px 0;
+  .heading {
+    @include ff-fx-layout(row);
+    @include ff-fx-layout-alignment(center, center);
+    position: relative;
+    background-color: transparent;
+    .stroke {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%);
+      height: 4px;
+      background-color: $color-primary-highlight;
+    }
+  }
+}
